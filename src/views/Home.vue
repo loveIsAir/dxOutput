@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    这是我第一个github项目
   </div>
 </template>
 
