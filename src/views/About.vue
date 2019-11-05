@@ -16,20 +16,26 @@
           </el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="发票类型">
-        <el-select
-          v-model="formInline.fplx"
-          multiple
-          collapse-tags
-          placeholder="请选择">
-          <el-option
-            v-for="item in options2"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
-      </el-form-item>
+      <!--<el-form-item label="发票类型">-->
+        <!--<dictionary-select-->
+          <!--class="common-select-width"-->
+          <!--type="invoiceType"-->
+          <!--enableWholeOption="true"-->
+          <!--ref="invoiceType"-->
+          <!--@emitCallback="invoiceTypeCallback"></dictionary-select>-->
+        <!--&lt;!&ndash;<el-select&ndash;&gt;-->
+          <!--&lt;!&ndash;v-model="formInline.fplx"&ndash;&gt;-->
+          <!--&lt;!&ndash;multiple&ndash;&gt;-->
+          <!--&lt;!&ndash;collapse-tags&ndash;&gt;-->
+          <!--&lt;!&ndash;placeholder="请选择">&ndash;&gt;-->
+          <!--&lt;!&ndash;<el-option&ndash;&gt;-->
+            <!--&lt;!&ndash;v-for="item in options2"&ndash;&gt;-->
+            <!--&lt;!&ndash;:key="item.value"&ndash;&gt;-->
+            <!--&lt;!&ndash;:label="item.label"&ndash;&gt;-->
+            <!--&lt;!&ndash;:value="item.value">&ndash;&gt;-->
+          <!--&lt;!&ndash;</el-option>&ndash;&gt;-->
+        <!--&lt;!&ndash;</el-select>&ndash;&gt;-->
+      <!--</el-form-item>-->
       <el-form-item>
         <el-button type="primary" @click="onSubmit">查询</el-button>
       </el-form-item>
@@ -46,6 +52,7 @@
         formInline: {
           xhfMc: [],
           fplx: [],
+          fpzlDm:''
         },
         options: [
           {
@@ -87,6 +94,9 @@
     },
     methods: {
       onSubmit() {
+      },
+      invoiceTypeCallback (val) {
+        this.formInline.fpzlDm = val
       },
     },
   };

@@ -1,9 +1,9 @@
 <template>
-  <div class="home">
+  <div class="profile">
     <!--<img alt="Vue logo" src="../assets/logo.png">-->
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    Home这是我第一个github项目
-
+    this is profile page
+    这个是orderList的子组件 profile
   </div>
 </template>
 
@@ -12,17 +12,13 @@
   import HelloWorld from '@/components/HelloWorld.vue';
 
   export default {
-    components: {
-      HelloWorld,
+    name: 'profile',
+    data() {
+      return {};
     },
-    methods: {
-      test1(obj) {
-        return obj.num == 0;
-      }
-    },
+    methods: {},
     created() {
-      let result = this.test1({ num: 0 });
-      console.log(`result--${result},${typeof result}`);
-    }
+
+    },
   };
 </script>
